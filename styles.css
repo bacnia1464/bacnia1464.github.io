@@ -97,3 +97,52 @@ footer {
   padding: 20px 0;
   margin-top: 40px;
 }
+
+/*Table Styling*/
+table {
+    /*Set full width and collapse borders for a clean look*/
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 15px;
+}
+
+table, th, td {
+    /*Apply borders to the table and cells*/
+    border: 1px solid #bdc3c7; 
+}
+
+th, td {
+    /*Add cell padding for readability*/
+    padding: 12px; 
+    text-align: left;
+}
+
+th {
+    /*Header background color*/
+    background-color: #2c3e50; 
+    color: white;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+/*Ensure the navigation links have a smooth transition*/
+nav ul li a {
+    /*This applies the transition to background and text color*/
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/*Add a smooth transition to all main content sections*/
+main section {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*Implement zoom in on hover for each main content section*/
+main section:hover {
+    transform: scale(1.02); /*Scales the section up by 2%*/
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /*Enhances the shadow on hover*/
+}

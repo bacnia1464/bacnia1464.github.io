@@ -220,16 +220,42 @@ textarea:hover {
   }
 }
 
-/*Desktop Display*/
+/*Desktop Display Grid & Layout*/
 @media (min-width: 1024px) {
-  main,
+
+  /*Sets the navigation menu horizontal*/
   nav ul {
     flex-direction: row;
     justify-content: center;
     gap: 30px;
   }
 
+  /*Stack main sections (About, Projects, Contact) vertically*/
+  main {
+    flex-direction: column;
+    align-items: center; /*Centers the content*/
+    gap: 60px; /*Adds room between sections*/
+    max-width: 1000px; /*Prevents sections from getting too wide on larger monitors*/
+    margin: 40px auto; /*Centers the container on the page*/
+
+  /*Ensures sections span the available width*/
+  section {
+    width: 100%;
+  }
+
+  /*Stack project cards side by side on desktop*/
+  .project-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project-card {
+    width: calc(50% - 10px); /*Two cards per row*/
+  }
   .contact-form {
     max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
